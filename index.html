@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}">
+<html lang="fr" x-data="{menuIsOpen: false}" :class="noscroll:menuIsOpen">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test menu</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
-    <style>
-      .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: #fff;
-        display: grid;
-        place-content: center;
-      }
-      .header__menuBtn {
-        position: relative;
-        z-index: 10;
-      }
-      .noscroll,
-      .noscroll body {
-        overflow: hidden;
-      }
-    </style>
+    <style>.menu { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      display: grid;
+      place-content: center;
+    }
+    .header__menuBtn {
+      position: relative;
+      z-index: 10;
+    }
+    .noscroll,
+    .noscroll body {
+      overflow: hidden;
+    } </style>
   </head>
   <body>
     <!-- https://emmet.io/ -->
@@ -35,9 +33,9 @@
       <h1>Test de menu</h1>
       <nav id="mainNav" x-show="menuIsOpen" x-transition:duration.1000ms class="menu" style="display: none;">
         <ul>
-          <li><a href="#">item 1</a></li>
-          <li><a href="#">item 2</a></li>
-          <li><a href="#">item 3</a></li>
+          <li><a href="index.html">item 1</a></li>
+          <li><a href="index.html">item 2</a></li>
+          <li><a href="index.html">item 3</a></li>
         </ul>
       </nav>
     </header>
@@ -49,5 +47,17 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
+    <dl>
+      <dt>Lorem.</dt>
+      <dd>Lorem ipsum dolor sit amet.</dd>
+    </dl>
+    <dl>
+      <dt>Nesciunt.</dt>
+      <dd>Eum atque dolor corrupti eligendi.</dd>
+    </dl>
+    <dl>
+      <dt>Accusamus?</dt>
+      <dd>Rerum non debitis cupiditate fugiat?</dd>
+    </dl>
   </body>
 </html>
