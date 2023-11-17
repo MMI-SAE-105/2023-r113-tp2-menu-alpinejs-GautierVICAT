@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page des chiens</title>
-</head>
-<body>
-    <button><a href="#">retour à l'accueil</a></button>
-    <ul>
-        <li><button><a href="dogs-1.html"></a>Page du premier chien</button></li>
-        <li><button><a href="dogs-2.html"></a>Page du second chien</button></li>
-    </ul>
-</body>
-</html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="noscroll:menuIsOpen">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>.menu { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      display: grid;
+      place-content: center;
+    }
+    .header__menuBtn {
+      position: relative;
+      z-index: 10;
+    }
+    .noscroll,
+    .noscroll body {
+      overflow: hidden;
+    } </style>
