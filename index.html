@@ -47,17 +47,23 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
-    <dl>
-      <dt>Lorem.</dt>
-      <dd>Lorem ipsum dolor sit amet.</dd>
+    <dl x-data="{ddIsOpen : false}">
+      <button @click="ddIsOpen = !ddIsOpen"><dt>Lorem.</dt></button>
+      <div x-show="ddIsOpen" style ="display: none";>
+        <dd>Lorem ipsum dolor sit amet.</dd>
+      </div>
     </dl>
-    <dl>
-      <dt>Nesciunt.</dt>
-      <dd>Eum atque dolor corrupti eligendi.</dd>
+    <dl x-data="{ddIsOpen : false}">
+      <button @click="ddIsOpen = !ddIsOpen"><dt>Nesciunt.</dt></button>
+      <div x-show="ddIsOpen" style ="display: none";>
+        <dd>Eum atque dolor corrupti eligendi.</dd>
+      </div>
     </dl>
-    <dl>
-      <dt>Accusamus?</dt>
-      <dd>Rerum non debitis cupiditate fugiat?</dd>
+    <dl x-data="{ddIsOpen : false}">
+      <button @click="ddIsOpen = !ddIsOpen"><dt>Accusamus?</dt></button>
+      <div x-show="ddIsOpen" style ="display: none";>
+        <dd>Rerum non debitis cupiditate fugiat?</dd>
+      </div>
     </dl>
   </body>
 </html>
