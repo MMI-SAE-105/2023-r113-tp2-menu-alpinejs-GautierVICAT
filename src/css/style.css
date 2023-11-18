@@ -12,11 +12,17 @@ h1 {
 }
 h2 {
     color : #5B3C11;
+    font-family: 'Inconsolata', monospace;
+    font-size: 35px;
 }
 p {
     color: #564E42;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 15px;
 }
 button {
     background-image:url(../../public/img/backgrounds.avif);
     color: #2d1d00;  
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 15px;
 }
