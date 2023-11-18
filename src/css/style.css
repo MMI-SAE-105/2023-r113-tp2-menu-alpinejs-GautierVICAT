@@ -31,4 +31,8 @@ dl {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 15px;
 }
-
+a {
+    color: black;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 20px;
+}
