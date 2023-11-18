@@ -13,7 +13,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: #fff;
+      background-image: url("public/img/backgrounds.avif");
       display: grid;
       place-content: center;
     }
@@ -35,7 +35,16 @@
       <nav id="mainNav" x-show="menuIsOpen" x-transition:duration.1000ms class="menu" style="display: none;">
         <ul>
           <li><a href="cats/index.html">Page des chats</a></li>
+          <ul>
+            <li><a href="cats/cats-1.html">Page du premier chat</a></li>
+            <li><a href="cats/cats-2.html">Page du second chat</a></li>
+          </ul>
+          <br>
           <li><a href="dogs/index.html">Page des chiens</a></li>
+          <ul>
+            <li><a href="dogs/dogs-1.html">Page du premier chien</a></li>
+            <li><a href="dogs/dogs-2.html">Page du second chien</a></li>
+          </ul>
         </ul>
       </nav>
     </header>

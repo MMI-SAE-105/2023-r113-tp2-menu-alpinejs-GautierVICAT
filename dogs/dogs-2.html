@@ -13,7 +13,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: #fff;
+            background-image: url("../public/img/backgrounds.avif");
             display: grid;
             place-content: center;
         }
@@ -34,9 +34,19 @@
           <h1>La pages du second chien</h1>
           <nav id="mainNav" x-show="menuIsOpen" x-transition:duration.1000ms class="menu" style="display: none;">
             <ul>
-              <li><a href="../index.html">Accueil</a></li>
-              <li><a href="index.html">accueil des chiens</a></li>
+              <li><a href="../cats/index.html">Page des chats</a></li>
+              <ul>
+                <li><a href="../cats/cats-1.html">Page du premier chat</a></li>
+                <li><a href="../cats/cats-2.html">Page du second chat</a></li>
+              </ul>
+              <br>
+              <li><a href="index.html">Page des chiens</a></li>
+              <ul>
+                <li><a href="dogs-1.html">Page du premier chien</a></li>
+                <li><a href="dogs-2.html">Page du second chien</a></li>
             </ul>
+            <br>
+            <button><img src="../public/icones/fleche.png" alt="fleche" height="15px"><a href="../index.html">Accueil du site</a></button>
           </nav>
         </header>
         <img src="../public/img/dogs/chien-2.png" height="400px" alt="le second chien">
