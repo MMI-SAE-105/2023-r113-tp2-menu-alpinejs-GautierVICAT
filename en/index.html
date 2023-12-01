@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="noscroll:menuIsOpen">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>.menu { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("../public/img/backgrounds.avif");
+      display: grid;
+      place-content: center;
+    }
+    .header__menuBtn {
+      position: relative;
+      z-index: 10;
+    }
+    .noscroll,
+    .noscroll body {
+      overflow: hidden;
+    } </style>
+  </head>
+  <body>
+    <header>
+      <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"> <img src="../public/icones/Menu.png" alt="menu" height="50px" width="50px"> </button>
+      <h1>Test of menu</h1>
+      <nav id="mainNav" x-transition:.duration.2000ms x-show="menuIsOpen" class="menu" >
+        <ul>
+          <li><a href="cats/index.html">Page of cats</a></li>
+          <ul>
+            <li><a href="cats/cats-1.html">Page of first cat</a></li>
+            <li><a href="cats/cats-2.html">Page of second cat</a></li>
+          </ul>
+          <br>
+          <li><a href="dogs/index.html">Page of dogs</a></li>
+          <ul>
+            <li><a href="dogs/dogs-1.html">Page of first dog</a></li>
+            <li><a href="dogs/dogs-2.html">Page of second dog</a></li>
+          </ul>
+        </ul>
+      </nav>
+    </header>
+    <h2>Lorem, ipsum.</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+      mollitia adipisci alias error laboriosam numquam incidunt magni eum eos
+      nemo aliquid pariatur quam voluptates animi laudantium, aperiam
+      consectetur nobis enim.
+    </p>
+    <dl x-data="{ddIsOpen : false}">
+      <button @click="ddIsOpen = !ddIsOpen">
+        <dt>Lorem.</dt>
+      </button>
+      <div x-transition:.duration.2000ms x-show="ddIsOpen" style ="display: none";>
+        <dd>Lorem ipsum dolor sit amet.</dd>
+      </div>
+    </dl>
+    <dl x-data="{ddIsOpen : false}">
+      <button @click="ddIsOpen = !ddIsOpen">
+        <dt>Nesciunt.</dt>
+      </button>
+      <div x-transition:.duration.2000ms x-show="ddIsOpen" style ="display: none";>
+        <dd>Eum atque dolor corrupti eligendi.</dd>
+      </div>
+    </dl>
+    <dl x-data="{ddIsOpen : false}">
+      <button @click="ddIsOpen = !ddIsOpen">
+        <dt>Accusamus?</dt>
+      </button>
+      <div x-transition:.duration.2000ms x-show="ddIsOpen" style ="display: none";>
+        <dd>Rerum non debitis cupiditate fugiat?</dd>
+      </div>
+    </dl>
+    <h2>Pages of cats and dogs</h2>
+    <ul>
+      <li><a href="cats/index.html">page of cats</a></li>
+      <li><a href="dogs/index.html">page of dogs</a></li>
+    </ul>
+  </body>
+</html>
