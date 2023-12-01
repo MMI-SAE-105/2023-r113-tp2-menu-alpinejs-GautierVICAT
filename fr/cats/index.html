@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="noscroll:menuIsOpen">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Page des chats</title>
+        <link rel="stylesheet" href="../src/css/style.css">
+        <script defer src="https://unpkg.com/alpinejs"></script>
+        <style>.menu { 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("../public/img/backgrounds.avif");
+            display: grid;
+            place-content: center;
+        }
+        .header__menuBtn {
+        position: relative;
+        z-index: 10;
+        }
+        .noscroll,
+        .noscroll body {
+        overflow: hidden;
+        } </style>
+    </head>
+    <body>
+        <!-- https://emmet.io/ -->
+        <!-- header>h1{Test de menu} -->
+        <header>
+          <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"> <img src="../public/icones/Menu.png" alt="menu" height="50px" width="50px"> </button>
+          <h1>La pages des chats</h1>
+          <nav id="mainNav" x-transition:.duration.2000ms x-show="menuIsOpen" class="menu" >
+            <ul>
+              <li><a href="index.html">Page des chats</a></li>
+              <ul>
+                <li><a href="cats-1.html">Page du premier chat</a></li>
+                <li><a href="cats-2.html">Page du second chat</a></li>
+              </ul>
+              <br>
+              <li><a href="../dogs/index.html">Page des chiens</a></li>
+              <ul>
+                <li><a href="../dogs/dogs-1.html">Page du premier chien</a></li>
+                <li><a href="../dogs/dogs-2.html">Page du second chien</a></li>
+            </ul>
+            <br>
+            <button><img src="../public/icones/fleche.png" alt="fleche" height="15px"><a href="../index.html">Accueil du site</a></button>
+          </nav>
+        </header>
+        <ul>
+            <li><a href="cats-1.html">La page du premier chat</a></li>
+            <li><a href="cats-2.html">La page du second chat</a></li>
+        </ul>
+        <h1>Retour à l'Accueil</h1>
+        <button><img src="../public/icones/fleche.png" alt="fleche" height="15px"><a href="../index.html">Accueil du site</a></button>
+    </body>
