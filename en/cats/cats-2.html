@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="noscroll:menuIsOpen">
+<html lang="en" x-data="{menuIsOpen: false}" :class="noscroll:menuIsOpen">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Page du second chat</title>
-        <link rel="stylesheet" href="../src/css/style.css">
+        <title>Page of second cat</title>
+        <link rel="stylesheet" href="../../src/css/style.css">
         <script defer src="https://unpkg.com/alpinejs"></script>
         <style>.menu { 
             position: fixed;
@@ -13,7 +13,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url("../public/img/backgrounds.avif");
+            background-image: url("../../public/img/backgrounds.avif");
             display: grid;
             place-content: center;
         }
@@ -27,27 +27,25 @@
         } </style>
     </head>
     <body>
-        <!-- https://emmet.io/ -->
-        <!-- header>h1{Test de menu} -->
         <header>
-          <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"> <img src="../public/icones/Menu.png" alt="menu" height="50px" width="50px"> </button>
-          <h1>La pages du second chat</h1>
+          <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header__menuBtn"> <img src="../../public/icones/Menu.png" alt="menu" height="50px" width="50px"> </button>
+          <h1>The page of the second cat</h1>
           <nav id="mainNav" x-transition:.duration.2000ms x-show="menuIsOpen" class="menu" >
             <ul>
-              <li><a href="index.html">Page des chats</a></li>
+              <li><a href="index.html">Page of cats</a></li>
               <ul>
-                <li><a href="cats-1.html">Page du premier chat</a></li>
-                <li><a href="cats-2.html">Page du second chat</a></li>
+                <li><a href="cats-1.html">Page of first cat</a></li>
+                <li><a href="cats-2.html">Page of second cat</a></li>
               </ul>
               <br>
-              <li><a href="../dogs/index.html">Page des chiens</a></li>
+              <li><a href="../dogs/index.html">Page of dogs</a></li>
               <ul>
-                <li><a href="../dogs/dogs-1.html">Page du premier chien</a></li>
-                <li><a href="../dogs/dogs-2.html">Page du second chien</a></li>
+                <li><a href="../dogs/dogs-1.html">Page of first dog</a></li>
+                <li><a href="../dogs/dogs-2.html">Page of second dog</a></li>
             </ul>
             <br>
-            <button><img src="../public/icones/fleche.png" alt="fleche" height="15px"><a href="../index.html">Accueil du site</a></button>
+            <button><img src="../../public/icones/fleche.png" alt="fleche" height="15px"><a href="../index.html">Home page</a></button>
           </nav>
         </header>
-        <img src="../public/img/cats/chat-2.png" height="400px" alt="le second chat">
+        <img src="../../public/img/cats/chat-2.png" height="400px" alt="Second cat">
     </body>
